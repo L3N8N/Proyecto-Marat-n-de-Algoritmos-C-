@@ -1,0 +1,32 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream> // Incluye la librería para entrada/salida
+
+int main() {
+    int num1, num2, num3; // Declara tres variables enteras para almacenar los números
+    int suma; // Declara una variable para almacenar la suma
+
+    // Solicita al usuario que ingrese los tres números
+    std::cout << "Ingrese el primer número: ";
+    std::cin >> num1;
+
+    std::cout << "Ingrese el segundo número: ";
+    std::cin >> num2;
+
+    std::cout << "Ingrese el tercer número: ";
+    std::cin >> num3;
+
+    // Realiza la suma de los tres números
+    suma = num1 + num2 + num3;
+
+    // Muestra el resultado de la suma
+    std::cout << "La suma es: " << suma << std::endl;
+
+    return 0; // Indica que el programa terminó correctamente
+}
