@@ -1,0 +1,45 @@
+
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+bool esPrimo(int num) {
+    if (num <= 1) {
+        return false; // Los números menores o iguales a 1 no son primos
+    }
+    if (num <= 3) {
+        return true; // 2 y 3 son primos
+    }
+    if (num % 2 == 0 || num % 3 == 0) {
+        return false; // Elimina divisores de 2 y 3
+    }
+
+    // Comprueba divisores de la forma 6k ± 1 hasta la raíz de num
+    for (int i = 5; i * i <= num; i = i + 6) {
+        if (num % i == 0 || num % (i + 2) == 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    int numero;
+    std::cout << "Ingresa un número: ";
+    std::cin >> numero;
+
+    if (esPrimo(numero)) {
+        std::cout << numero << " es un número primo." << std::endl;
+    } else {
+        std::cout << numero << " no es un número primo." << std::endl;
+    }
+
+    return 0;
+}
