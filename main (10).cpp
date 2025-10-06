@@ -1,0 +1,47 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream> // Para entrada/salida (cout, cin)
+#include <cstdlib>  // Para rand() y srand()
+#include <ctime>    // Para time()
+
+int main() {
+    // 1. Inicializar el generador de números aleatorios
+    // Se usa el tiempo actual para que los números aleatorios cambien cada vez que se ejecuta el programa.
+    srand(time(0));
+
+    // 2. Generar el número secreto
+    // rand() % 100 genera un número entre 0 y 99.
+    // Sumamos 1 para obtener un número entre 1 y 100.
+    int numeroSecreto = 1 + (rand() % 100);
+    int intentoUsuario = 0;
+    int intentosContador = 0;
+
+    std::cout << "¡Bienvenido al juego de Adivina el Número!" << std::endl;
+    std::cout << "He pensado en un número entre 1 y 100." << std::endl;
+
+    // 3. Bucle principal del juego
+    // El bucle continúa hasta que el usuario adivine el número secreto.
+    do {
+        std::cout << "Introduce tu intento: ";
+        std::cin >> intentoUsuario; // Lee el número que ingresa el usuario
+        intentosContador++; // Incrementa el contador de intentos
+
+        // 4. Comparar el intento del usuario con el número secreto
+        if (intentoUsuario > numeroSecreto) {
+            std::cout << "El número secreto es menor." << std::endl;
+        } else if (intentoUsuario < numeroSecreto) {
+            std::cout << "El número secreto es mayor." << std::endl;
+        } else {
+            std::cout << "\n¡Felicidades! ¡Adivinaste el número en " << intentosContador << " intentos!" << std::endl;
+            std::cout << "El número era: " << numeroSecreto << std::endl;
+        }
+    } while (intentoUsuario != numeroSecreto); // El bucle termina cuando el intento es igual al número secreto
+
+    return 0;
+}
