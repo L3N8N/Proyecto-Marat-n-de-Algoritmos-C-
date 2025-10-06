@@ -1,0 +1,27 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream> // Incluye la librería para entrada/salida estándar
+
+int main() {
+    int numero; // Variable para almacenar el número del usuario
+
+    // 1. Pedir al usuario que ingrese un número
+    std::cout << "Ingrese un número entero para ver su tabla de multiplicar: ";
+    std::cin >> numero; // Lee el número ingresado por el usuario
+
+    // 2. Usar un bucle 'for' para iterar de 1 a 10
+    std::cout << "\nTabla de multiplicar del " << numero << ":" << std::endl;
+    for (int i = 1; i <= 10; ++i) {
+        // 3. Calcular e imprimir cada línea de la tabla
+        // El resultado es 'numero' multiplicado por el valor actual de 'i'
+        std::cout << numero << " x " << i << " = " << (numero * i) << std::endl;
+    }
+
+    return 0; // Indica que el programa terminó correctamente
+}
