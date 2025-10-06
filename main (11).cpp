@@ -1,0 +1,47 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream> // Para entrada y salida de datos (cout, cin)
+#include <algorithm> // Para la función std::max
+
+int main() {
+    int num1, num2, num3;
+
+    // Solicitar al usuario que ingrese tres números
+    std::cout << "Ingrese el primer número: ";
+    std::cin >> num1;
+    std::cout << "Ingrese el segundo número: ";
+    std::cin >> num2;
+    std::cout << "Ingrese el tercer número: ";
+    std::cin >> num3;
+
+    // --- Método 1: Usando if-else anidados ---
+    int mayor_if_else;
+    if (num1 >= num2 && num1 >= num3) {
+        mayor_if_else = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        mayor_if_else = num2;
+    } else {
+        mayor_if_else = num3;
+    }
+    std::cout << "\n(if-else) El número mayor es: " << mayor_if_else << std::endl;
+
+    // --- Método 2: Usando std::max ---
+    // std::max(a, b) devuelve el mayor de a y b
+    // Para 3 números, lo usamos dos veces o usamos un initializer_list
+    int mayor_max_doble = std::max(num1, std::max(num2, num3));
+    // O usando un initializer_list (C++11 y posteriores)
+    int mayor_max_list = std::max({num1, num2, num3});
+    std::cout << "(std::max) El número mayor es: " << mayor_max_list << std::endl;
+
+    // --- Método 3: Usando el operador ternario ---
+    int mayor_ternario = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
+    std::cout << "(Operador Ternario) El número mayor es: " << mayor_ternario << std::endl;
+
+    return 0;
+}
