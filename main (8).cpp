@@ -1,0 +1,37 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+int main() {
+    int num_positivos = 0;
+    int num_negativos = 0;
+    int num;
+    int cantidad_numeros;
+
+    std::cout << "¿Cuántos números desea ingresar? ";
+    std::cin >> cantidad_numeros;
+
+    std::cout << "Ingrese los " << cantidad_numeros << " números:" << std::endl;
+
+    for (int i = 0; i < cantidad_numeros; ++i) {
+        std::cin >> num;
+        if (num > 0) {
+            num_positivos++; // Incrementa el contador de positivos
+        } else if (num < 0) {
+            num_negativos++; // Incrementa el contador de negativos
+        }
+        // Los números cero no se cuentan en este ejemplo,
+        // puedes agregar una condición 'else' si quieres contarlos también.
+    }
+
+    std::cout << "\nTotal de números positivos: " << num_positivos << std::endl;
+    std::cout << "Total de números negativos: " << num_negativos << std::endl;
+
+    return 0;
+}
