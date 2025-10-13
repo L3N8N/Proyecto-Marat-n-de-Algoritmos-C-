@@ -1,11 +1,4 @@
-/******************************************************************************
 
-Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby,
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
-
-*******************************************************************************/
 #include <iostream> // Incluye la biblioteca estandar de entrada y salida para usar std::cout y std::cin.
 int main() { // La función principal donde comienza la ejecución del programa.
 double calificacion; // Declara una variable de tipo double para almacenar la calificacion, permitiendo decimales.
