@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 
 bool esPrimo(int num) {
