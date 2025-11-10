@@ -1,4 +1,3 @@
-
 #include <iostream> // Para las funciones de entrada y salida (cin, cout)
 
 int main() {
