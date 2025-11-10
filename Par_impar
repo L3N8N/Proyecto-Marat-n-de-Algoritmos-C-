@@ -1,4 +1,3 @@
-
 #include <iostream> // Incluimos la biblioteca para entrada/salida
 
 int main() {
