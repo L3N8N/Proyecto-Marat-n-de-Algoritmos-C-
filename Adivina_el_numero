@@ -1,4 +1,3 @@
-
 #include <iostream> // Para entrada/salida (cout, cin)
 #include <cstdlib>  // Para rand() y srand()
 #include <ctime>    // Para time()
