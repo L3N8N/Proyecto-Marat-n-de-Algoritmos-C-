@@ -1,4 +1,3 @@
-
 #include <iostream> // Incluye la biblioteca estandar de entrada y salida para usar std::cout y std::cin.
 int main() { // La función principal donde comienza la ejecución del programa.
 double calificacion; // Declara una variable de tipo double para almacenar la calificacion, permitiendo decimales.
